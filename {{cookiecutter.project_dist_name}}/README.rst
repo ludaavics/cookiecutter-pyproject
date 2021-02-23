@@ -1,6 +1,6 @@
-*****************************
+##############################
 {{cookiecutter.project_name}}
-*****************************
+##############################
 
 .. image:: https://img.shields.io/badge/python-{{cookiecutter.python_version}}+-blue.svg
   :target: https://www.python.org/downloads/
