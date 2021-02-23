@@ -1,0 +1,15 @@
+{
+  "full_name": "Ludovic Tiako",
+  "email": "ludovic.tiako@gmail.com",
+  "github_username": "ludaavics",
+  "project_name": "Python Package",
+  "project_dist_name": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
+  "project_import_name": "{{ cookiecutter.project_name.lower().replace('-', '_') .replace(' ', '_') }}",
+  "description": "Template for Python packages",
+  "python_version": 3.7,
+  "version": "0.1.0",
+  "license": [
+    "MIT",
+    "Proprietary"
+  ]
+}
