@@ -1,0 +1,20 @@
+
+language: python
+python:
+  - {{cookiecutter.minimum_python_version}}
+
+branches:
+  only:
+    - master
+
+cache:
+  pip: true
+
+install:
+  - make ci-install
+
+script:
+  - make ci-script
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -y .ci/codecov.yml

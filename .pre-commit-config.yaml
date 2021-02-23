@@ -6,6 +6,10 @@ repos:
   - id: end-of-file-fixer
   - id: check-toml
   - id: check-yaml
+    exclude: |
+      (?x)^(
+        {{cookiecutter.project_dist_name}}/.travis.yml
+      )
   - id: check-json
   - id: check-added-large-files
   - id: check-merge-conflict

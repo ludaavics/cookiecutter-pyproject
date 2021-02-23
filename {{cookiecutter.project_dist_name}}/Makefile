@@ -35,7 +35,7 @@ docs-clean:
 	@$(SPHINXBUILD) -M clean "$(SOURCEDIR)" "$(BUILDDIR)"
 
 docs-live:
-	@make docs-clean
+	@$(MAKE) docs-clean
 	@sleep 1 && touch docs/*.rst
 	@sphinx-autobuild \
 		-q \
@@ -56,7 +56,7 @@ docs-gh-pages:
 	@rm -rf build templates static
 	@git checkout master $(GH_PAGES_SOURCES)
 	@git reset HEAD
-	@make docs
+	@$(MAKE) docs
 	@mv -fv $(BUILDDIR)/html/* ./
 	@rm -rf $(GH_PAGES_SOURCES) build
 	@git add -A
@@ -67,10 +67,17 @@ docs-gh-pages:
 #                                         CI/CD                                        #
 #																																											 #
 #                                         tests                                        #
-#                                       ci-tests                                       #
+#                                      ci-install                                      #
+#                                       ci-script                                      #
 # ------------------------------------------------------------------------------------ #
+
+
 tests:
 	@python -m pytest --cov={{cookiecutter.project_import_name}} --cov-branch --verbose
 
-ci-tests:
-	@make tests
+ci-install:
+	@$(MAKE) install
+
+ci-script:
+	@$(MAKE) tests
+	@$(MAKE) docs-tests

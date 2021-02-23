@@ -6,7 +6,7 @@ authors = ["{{cookiecutter.full_name}} <{{cookiecutter.email}}>"]
 license = "{{cookiecutter.license}}"
 
 [tool.poetry.dependencies]
-python = "^{{cookiecutter.python_version}}"
+python = "^{{cookiecutter.minimum_python_version}}"
 
 [tool.poetry.dev-dependencies]
 black = "^20.8b1"
