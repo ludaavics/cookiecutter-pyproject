@@ -76,7 +76,7 @@ tests:
 	@python -m pytest --cov={{cookiecutter.project_import_name}} --cov-branch --verbose
 
 ci-install:
-	@$(MAKE) install
+	@$(MAKE) init
 
 ci-script:
 	@$(MAKE) tests
