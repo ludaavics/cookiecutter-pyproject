@@ -13,7 +13,6 @@ GH_PAGES_SOURCES = docs	{{cookiecutter.project_import_name}}	Makefile
 # ------------------------------------------------------------------------------------ #
 init:
 	@pip install --upgrade pip
-	@pip install poetry
 	@poetry install
 	@pre-commit install
 	@pre-commit install -t pre-push
