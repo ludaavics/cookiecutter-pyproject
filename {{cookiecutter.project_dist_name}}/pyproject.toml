@@ -28,6 +28,10 @@ ensure_newline_before_comments = true
 line_length = 88
 skip = []
 
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "INFO"
+log_cli_format = "%(asctime)-10s %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
