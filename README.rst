@@ -10,3 +10,8 @@ Python Packages Template
   :alt: MIT License
 
 Template for python packages.
+
+
+.. code-block:: bash
+
+  $ cookiecutter https://github.com/ludaavics/cookiecutter-pyproject
